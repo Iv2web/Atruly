@@ -1,0 +1,116 @@
+//<Connecting fonts>=================================================================
+// insert the google fonts URL here
+//<Connecting fonts>=================================================================
+
+//<Defoult font>=================================================================
+$fontFamily: "";
+//<Defoult font>=================================================================
+
+//<Variables>=================================================================
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1440;
+$md1: $maxWidthContainer + 10;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//<Variables>=================================================================
+
+//<Connecting reset styles>=================================================================
+@import "../scss/_reset-style";
+body {
+  color: #000;
+  font-size: 14px;
+  &._lock {
+    overflow: hidden;
+  }
+}
+//<Connecting reset styles>=================================================================
+
+//<Wrapper>=================================================================
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+//<Wrapper>=================================================================
+
+//<MAIN GRID>=================================================================
+.container {
+  max-width: $maxWidthContainer + px;
+  padding: 0px 10px;
+  margin: 0px auto;
+}
+//<MAIN GRID>=================================================================
+
+//<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+@import "../scss/_mixin.scss";
+@import "../scss/_ui.scss";
+@import "../scss/_variables";
+//<CONNECTING FILES STYLES PAGES AND ELEMENTS>=================================================================
+
+//< START COMMON STYLE BLOCKS >=================================================================
+
+//< END COMMON STYLE BLOCKS >=================================================================
+//< START HEADER >=================================================================
+
+//< END HEADER >=================================================================
+//< START CONTENT >=================================================================
+
+//< END  CONTENT >=================================================================
+//< START FOOTER >=================================================================
+
+//< END FOOTER >=================================================================
+
+// burger of three spans
+
+/* 
+.icon-menu {
+  display: none;
+  @media (max-width: $md3+px) {
+    display: block;
+    //position: relative;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+    span {
+      transition: all 0.3s ease 0s;
+      top: calc(50% - 1px);
+      //top: 8px;
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      &:first-child {
+        top: 0px;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &.active {
+      span {
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          //top: 8px;
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          //bottom: 8px;
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
+}
+*/
