@@ -1,9 +1,9 @@
 //<Connecting fonts>=================================================================
-// insert the google fonts URL here
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 //<Connecting fonts>=================================================================
 
 //<Defoult font>=================================================================
-$fontFamily: "";
+$fontFamily: "Roboto", sans-serif;
 //<Defoult font>=================================================================
 
 //<Variables>=================================================================
@@ -19,8 +19,9 @@ $md4: 479.98;
 //<Connecting reset styles>=================================================================
 @import "../scss/_reset-style";
 body {
-  color: #000;
+  color: #666b67;
   font-size: 14px;
+  overflow: hidden;
   &._lock {
     overflow: hidden;
   }
@@ -55,6 +56,14 @@ body {
 .wrapper {
   background: $dark;
 }
+[class*=" _icon-"] {
+  font-size: 30px;
+  color: $mouse;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: $silver;
+  }
+}
 //< END COMMON STYLE BLOCKS >=================================================================
 //< START HEADER >=================================================================
 
@@ -63,13 +72,15 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 50px;
+    top: 0px;
     left: 0px;
+    margin: 50px 0px 0px 0px;
   }
   &__body {
     @media (min-width: $md4+px) {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       max-width: 725px;
     }
   }
@@ -121,12 +132,12 @@ body {
     font-size: 24px;
     line-height: 28 / 24 * 100%;
     span {
-      color: $Mouse;
+      color: $mouse;
     }
     transition: all 0.3s ease 0s;
     @media (min-width: $md2+px) {
       &:hover {
-        color: $Mouse;
+        color: $mouse;
         line-height: 28 / 24 * 100%;
         span {
           color: $silver;
@@ -184,9 +195,91 @@ body {
 
 //< END HEADER >=================================================================
 //< START CONTENT >=================================================================
-
+.page {
+  flex: 1 1 auto;
+}
 //< END  CONTENT >=================================================================
 //< START FOOTER >=================================================================
+.footer {
+  &__body {
+    display: flex;
+    padding: 65px 81px;
+    background-color: $antracit;
+    @media (max-width: $md2+px) {
+      display: block;
+      padding: 65px 81px 18px;
+    }
+  }
+
+  &__row {
+    flex: 0 0 567px;
+    display: flex;
+    @media (max-width: $md2+px) {
+      flex: 0 0 auto;
+      justify-content: space-between;
+    }
+  }
+
+  &__column {
+    flex: 0 1 50%;
+    @media (max-width: $md2+px) {
+      flex: 0 0 auto;
+    }
+    &_b {
+    }
+  }
+}
+.column-footer {
+  &__headline {
+    font-size: 24px;
+    line-height: 28 / 24 * 100%;
+    text-transform: uppercase;
+    color: $grey;
+    margin: 0px 0px 50px 0px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0px 0px 24px 0px;
+    font-size: 18px;
+    line-height: 21 / 18 * 100%;
+    text-transform: capitalize;
+    color: $grey;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__brand {
+    display: inline-block;
+    margin: 0px 0px 17px -65px;
+    @media (max-width: $md2+px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    @media (max-width: $md2+px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: $md2+px) {
+      justify-content: center;
+      margin: 17px 0px 0px 0px;
+    }
+  }
+
+  &__icon {
+    margin: 184px 0px 0px 44px;
+    @media (max-width: $md2+px) {
+      margin: 0px 22px;
+    }
+  }
+}
 
 //< END FOOTER >=================================================================
 
